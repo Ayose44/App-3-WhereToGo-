@@ -1,0 +1,67 @@
+<!--
+  Generated template for the Eventos page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>eventos</ion-title>
+	
+	 <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+<div id="todo">
+<div id="uno">
+<button ion-button (click)="goToOtherPage()"></button>
+<div class="container">
+  
+  <div class="w3-content" style="max-width:400px">
+ 
+
+  <img class="mySlides" src="../../assets/img/2.jpg" style="width:100%">
+
+  <div class="mySlides w3-container w3-xlarge w3-white w3-card-8">
+    <p><span class="w3-tag w3-yellow">New!</span>
+    <p>6 Crystal Glasses</p>
+    <p>Only $99 !!!</p>
+  </div>
+
+  <img class="mySlides" src="../../assets/img/1.jpg" style="width:100%">
+</div>
+
+  </div>
+
+</div>
+<div id="dos">
+<ion-list>
+  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item }}
+  </button>  
+</ion-list>
+</div>
+</div>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); 
+}
+</script>
+</ion-content>

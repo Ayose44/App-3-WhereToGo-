@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="fondo">
+    <ion-title>
+      Iniciar sesión
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form>
+<ion-list>
+  <ion-item>
+    <ion-label color="primary" floating >Email</ion-label>
+    <ion-input type="email" #email></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating >Contraseña</ion-label>
+    <ion-input type="password" #pass></ion-input>
+  </ion-item>
+</ion-list>
+<br>
+  <button ion-button round type="submit" class="center" (click)="Iniciar(pass.value,email.value)">Iniciar</button>
+  <br>
+  <button ion-button round   class="center">Olvidé contraseña</button>
+   
+      </form>
+</ion-content>
